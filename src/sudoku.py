@@ -15,7 +15,7 @@ class Sudoku:
         self.board = self.generate()
 
     def pattern(self, r, c):
-        return (self.base * (r % self.base) + r // self.base + c) % self.size
+        return int((self.base * (r % self.base) + r // self.base + c) % self.size)
 
     @staticmethod
     def shuffle(s):
